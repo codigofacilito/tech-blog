@@ -2,7 +2,7 @@
   "name": "@codigofacilito/gatsby-tech-blog-theme-workspace",
   "description": "A theme to build tech blogs",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "Uriel - uriel@codigofacilito.com",
   "bugs": {
     "url": "https://github.com/codigofacilito/tech-blog/issues"

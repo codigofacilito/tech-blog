@@ -40,6 +40,7 @@ module.exports = ({
   ],
   siteMetadata: {
     title: "My Awesome blog",
-    siteUrl: "localhost:8000"
+    siteUrl: "localhost:8000",
+    description: ""
   }
 })

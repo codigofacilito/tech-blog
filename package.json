@@ -1,7 +1,17 @@
 {
-  "name": "gatsby-tech-blog-theme-workspace",
+  "name": "@codigofacilito/gatsby-tech-blog-theme-workspace",
+  "description": "A theme to build tech blogs",
   "private": true,
   "version": "0.0.1",
+  "author": "Uriel - uriel@codigofacilito.com",
+  "bugs": {
+    "url": "https://github.com/codigofacilito/tech-blog/issues"
+  },
+  "homepage": "https://github.com/codigofacilito/tech-blog/tree/master/gatsby-theme-tech-blog#readme",,
+  "keywords": [
+    "gatsby",
+    "gatsby-themes"
+  ],
   "main": "index.js",
   "license": "MIT",
   "workspaces": [

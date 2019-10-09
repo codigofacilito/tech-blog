@@ -8,4 +8,8 @@ module.exports = {
       }
     }
   ],
+  siteMetadata: {
+    title: "Blog - CódigoFacilito",
+    siteUrl: "https://blog.codigofacilito.com"
+  }
 }

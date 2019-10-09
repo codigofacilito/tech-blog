@@ -8,11 +8,13 @@ export default ({ data })=>{
   const metadata = data.site.siteMetadata;
   return(
     <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{data.markdownRemark.frontmatter.title}</title>
-        <meta property="og:title" content={data.markdownRemark.frontmatter.title} />
-        <meta property="og:image" content={`${metadata.siteUrl}/post-thumbs/${slugify(data.markdownRemark.frontmatter.title)}.png`} />
+      <Helmet
+        title={data.markdownRemark.frontmatter.title}
+        meta={[
+          { name: 'keywords', content: data.markdownRemark.frontmatter.tags.join(",") },
+          { name: 'og:image', content: `${metadata.siteUrl}/post-thumbs/${slugify(data.markdownRemark.frontmatter.title)}.png` }
+        ]}
+        >
       </Helmet>
       <Post post={data.markdownRemark}  />
       

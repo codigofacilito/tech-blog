@@ -1,0 +1,5 @@
+items:
+  - title: Inicio
+    link: /
+  - title: Artículos
+    link: /posts

@@ -1,14 +1,11 @@
 {
-  "name": "gatsby-starter-theme-workspace",
+  "name": "gatsby-tech-blog-theme-workspace",
   "private": true,
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "build": "yarn workspace example build"
-  },
   "workspaces": [
-    "gatsby-theme-minimal",
-    "example"
+    "gatsby-theme-tech-blog",
+    "site"
   ]
 }

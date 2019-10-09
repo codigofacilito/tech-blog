@@ -1,3 +1,5 @@
 .cache
 public
 node_modules
+site/static/post-thumbs
+site/public

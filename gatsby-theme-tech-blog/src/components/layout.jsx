@@ -3,6 +3,7 @@ import { Layout as ThemeLayout, Main  } from 'theme-ui'
 import Header from './header';
 import { useStaticQuery } from 'gatsby';
 import { Helmet } from "react-helmet";
+import SEO from './SEO';
 
 export default (props) => {
   const metadata = useStaticQuery(graphql`
@@ -16,11 +17,7 @@ export default (props) => {
   `);
   return(
     <ThemeLayout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{metadata.site.siteMetadata.title}</title>
-        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
-      </Helmet>
+      <SEO />
       <Header />
       <Main>
         {props.children}

@@ -2,20 +2,20 @@ import React from 'react';
 import Post from '../components/post';
 import Layout from '../components/layout';
 import slugify from 'slugify'
-import { Helmet } from "react-helmet";
+import SEO from '../components/SEO';
 
 export default ({ data })=>{
   const metadata = data.site.siteMetadata;
+  const post = data.markdownRemark;
   return(
     <Layout>
-      <Helmet
-        title={data.markdownRemark.frontmatter.title}
-        meta={[
-          { name: 'keywords', content: data.markdownRemark.frontmatter.tags.join(",") },
-          { name: 'og:image', content: `${metadata.siteUrl}/post-thumbs/${slugify(data.markdownRemark.frontmatter.title)}.png` }
-        ]}
-        >
-      </Helmet>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || 'nothin’'}
+        image={`/post-thumbs/${slugify(data.markdownRemark.frontmatter.title)}.png`}
+        pathname={post.frontmatter.slug}
+        article
+      />
       <Post post={data.markdownRemark}  />
       
     </Layout>

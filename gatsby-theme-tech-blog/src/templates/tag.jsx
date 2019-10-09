@@ -1,8 +1,6 @@
 import React from 'react';
 import Post from '../components/post';
 import Layout from '../components/layout';
-import slugify from 'slugify'
-import { Helmet } from "react-helmet";
 import Tag from '../components/tag';
 
 export default ({data}) => {

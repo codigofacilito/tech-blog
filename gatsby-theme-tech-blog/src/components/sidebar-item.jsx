@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, Styled } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 
 export default ({tag})=>{

@@ -2,12 +2,12 @@
   "name": "@codigofacilito/gatsby-tech-blog-theme-workspace",
   "description": "A theme to build tech blogs",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Uriel - uriel@codigofacilito.com",
   "bugs": {
     "url": "https://github.com/codigofacilito/tech-blog/issues"
   },
-  "homepage": "https://github.com/codigofacilito/tech-blog/tree/master/gatsby-theme-tech-blog#readme",,
+  "homepage": "https://github.com/codigofacilito/tech-blog/tree/master/gatsby-theme-tech-blog#readme",
   "keywords": [
     "gatsby",
     "gatsby-themes"

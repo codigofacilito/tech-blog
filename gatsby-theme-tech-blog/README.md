@@ -40,5 +40,17 @@ The project looks to provide a solid foundation for you to build on top of it. T
 | basePath       | This path will prefix all the paths that the blogs generate                  |
 | prefixWithDate | Boolean value, when set to true, post paths will be prefixed with their date |
 
+```javascript
+plugins: [
+  {
+    resolve: `gatsby-theme-tech-blog`,
+    options: {
+      prefixWithDate: true, // Will generate paths like 2019/12/02/foo
+      basePath: '/'
+    }
+  }
+],
+```
+
 ## UI configuration
 This project uses Theme UI to build the interface, you can configure the theme based on the one that comes with the project which you can find [here](https://github.com/codigofacilito/tech-blog/blob/master/gatsby-theme-tech-blog/src/theme.js)

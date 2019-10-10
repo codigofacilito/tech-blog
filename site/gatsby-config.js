@@ -4,7 +4,10 @@ module.exports = {
       resolve: `gatsby-theme-tech-blog`,
       options: {
         prefixWithDate: false,
-        basePath: '/'
+        basePath: '/',
+        pagination:{
+          perPage: 2
+        }
       }
     }
   ],

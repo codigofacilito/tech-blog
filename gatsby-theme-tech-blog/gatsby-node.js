@@ -61,10 +61,10 @@ exports.createResolvers = ({ createResolvers }, { prefixWithDate = defaults.pref
 }
 
 
-exports.createPages = async ({ actions, graphql, reporter }, { basePath = defaults.basePath }) => {
+exports.createPages = async ({ actions, graphql, reporter }, { basePath = defaults.basePath, pagination = defaults.pagination }) => {
   const { createPage } = actions;
 
-  const posts = await graphql(`
+  const posts = (await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -81,19 +81,30 @@ exports.createPages = async ({ actions, graphql, reporter }, { basePath = defaul
         }
       }
     }
-  `);
+  `)).data.allMarkdownRemark.edges;
 
   if (posts.errors) {
     return Promise.reject(posts.errors);
   }
-  reporter.info(`Creating posts page`);
-  createPage({
-    path: basePath,
-    component: require.resolve(`./src/templates/posts.jsx`),
+  reporter.info(`Creating posts page and pagination`);
+
+  const postsPerPage = pagination.perPage;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? basePath : `${basePath}${i + 1}`,
+      component: require.resolve("./src/templates/posts.jsx"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
   });
   
-  reporter.info(`Creating posts pages`);
-  posts.data.allMarkdownRemark.edges.forEach(async ({ node }) => {
+  reporter.info(`Creating each post page`);
+  posts.forEach(async ({ node }) => {
     if (!node.frontmatter.slug) return;
     reporter.info(`Generating thumbs`);  
 

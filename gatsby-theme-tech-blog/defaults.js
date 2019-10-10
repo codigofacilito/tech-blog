@@ -3,5 +3,8 @@ module.exports = {
   navYMLPath: 'src/nav-items',
   basePath: '/',
   prefixWithDate: true,
-  imagesPath: 'static/post-thumbs/'
+  imagesPath: 'static/post-thumbs/',
+  pagination:{
+    perPage: 15
+  }
 }

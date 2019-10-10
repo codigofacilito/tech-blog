@@ -69,3 +69,23 @@ To add a new item to the nav bar just add an item to the `items.yaml` file with 
 - title: About
   link: /about
 ```
+
+## How to contribute
+First, fork the repo to your profile, then clone your fork into your local machine.
+
+The `tech-blog` repo is a monorepo that contains both the theme project which you can find in the `gatsby-theme-tech-blog` folder and a site that you can use to test your changes to the theme, this project is found on the `site` folder.
+
+You'll need to use `yarn` to manage the repositories, due to the monorepo configuration. To install the dependencies for both the site and the theme:
+
+```shell
+yarn workspace site install
+yarn workspace gatsby-theme-tech-blog install
+```
+
+To start the `site` project which is linked to the local theme, use this command:
+
+```shell
+yarn workspace site develop
+```
+
+Once you have made your changes to the theme, submit a pull request to this repo.

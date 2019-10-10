@@ -3,7 +3,7 @@
 
 ![Screenshot on the UI design of the generated blog](https://i.imgur.com/zEqFaQp.png)
 
-Bootstrap your blog with thee power of Gatsby and the Gatsby Theme for Tech blogs. The theme handles all the basic functionality for you.
+Bootstrap your blog with the power of Gatsby and the Gatsby Theme for Tech blogs. The theme handles all the basic functionality for you.
 
 ## Quick Start
 
@@ -22,7 +22,7 @@ plugins: [`gatsby-theme-tech-blog`]
 Whatch the magic happen.
 
 ## Features
-The Gatsby Theme for Tech blogs aim to handle all the basic features you would search for in a technical blog.  Like:
+The Gatsby Theme for Tech blogs aims to handle all the basic features you would look for in a technical blog. For now, these are the features contained in the theme:
 
 * Transform markdown to HTML
 * Automatically generates thumbs for social media

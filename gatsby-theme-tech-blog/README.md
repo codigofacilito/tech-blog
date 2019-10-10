@@ -1,4 +1,7 @@
+
 # Gatsby Theme for Tech blogs by CódigoFacilito
+
+![Screenshot on the UI design of the generated blog](https://i.imgur.com/zEqFaQp.png)
 
 Bootstrap your blog with thee power of Gatsby and the Gatsby Theme for Tech blogs. The theme handles all the basic functionality for you.
 
@@ -46,11 +49,23 @@ plugins: [
     resolve: `gatsby-theme-tech-blog`,
     options: {
       prefixWithDate: true, // Will generate paths like 2019/12/02/foo
-      basePath: '/'
+      basePath: '/posts' // Will generate paths like /posts/2019/12/02/foo
     }
   }
 ],
 ```
 
+Note: If you set the `basePath` value to the root path `/` you will only see the template for all the posts if you **don't have** an `index.js` file.
+
 ## UI configuration
 This project uses Theme UI to build the interface, you can configure the theme based on the one that comes with the project which you can find [here](https://github.com/codigofacilito/tech-blog/blob/master/gatsby-theme-tech-blog/src/theme.js)
+
+## Navigation configuration
+The items on the nav bar are generated based on the content of the `items.yaml` file which can be found on the `navYMLPath` which defaults to `src/nav-items`.
+
+To add a new item to the nav bar just add an item to the `items.yaml` file with the following pattern:
+
+```yaml
+- title: About
+  link: /about
+```

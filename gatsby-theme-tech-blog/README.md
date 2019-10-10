@@ -5,6 +5,8 @@
 
 Bootstrap your blog with the power of Gatsby and the Gatsby Theme for Tech blogs. The theme handles all the basic functionality for you.
 
+[Try the demo](https://blog.codigofacilito.com)
+
 ## Quick Start
 
 Install the theme on your Gatsby project
@@ -29,6 +31,7 @@ The Gatsby Theme for Tech blogs aims to handle all the basic features you would 
 * Code highlight with Prism
 * Tagging and categorization
 * SEO URLs and metadata
+* Pagination
 * More to come
 
 Would you like to suggest a feature? Feel free to open an issue with the **feature request** label.
